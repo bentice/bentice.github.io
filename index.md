@@ -1,11 +1,8 @@
 ---
 layout: default
 ---
+
 # Projects
-
-## Current Project:...
-
-
 
 ## [Enron Corpus: Network and Linguistic Analysis]()
 
@@ -44,7 +41,7 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 * Cleaned and prepped the data to be suitable for an academic presentation.
 
 # Education
-### University of Toronto, St. George
+## University of Toronto, St. George
 **Class of 2017**
 **Honours Bachelor of Science, Double Major Statistics and Psychology**
 
@@ -61,12 +58,4 @@ Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Lear
 
 # Links
 
-[Linkedin](https://www.linkedin.com/in/ben-tice/)
-
-[AngelList](https://angel.co/ben-tice)
-
-[Email](bentice49@gmail.com)
-
-[Github](https://github.com/bentice)
-
-[Kaggle](https://www.kaggle.com/bentice)
+[Linkedin](https://www.linkedin.com/in/ben-tice/) [AngelList](https://angel.co/ben-tice) [Github](https://github.com/bentice) [Kaggle](https://www.kaggle.com/bentice)
