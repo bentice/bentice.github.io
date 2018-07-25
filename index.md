@@ -3,7 +3,11 @@ layout: default
 ---
 # Projects
 
-## Enron Corpus: Network and Linguistic Analysis
+## Current Project:...
+
+
+
+## [Enron Corpus: Network and Linguistic Analysis]()
 
 Network Analysis of Enron Email Corpus for the purposes of testing theories proposed by Dr. James Pennebaker on use of pronouns in relation to social status. Used Various Centrality Algorithms as a measure of social status in the network to see if emails traveling up the hierarchy higher term frequency "I", "me", and "my" pronouns and emails traveling down the hierarchy higher term frequency "we", "us", and "ours" pronouns.
 
@@ -11,10 +15,11 @@ Network Analysis of Enron Email Corpus for the purposes of testing theories prop
 
 Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018).
 
-#Experience
+# Experience
 
 ### [Creative Destruction Lab](https://www.creativedestructionlab.com/)
 **Research Analyst, 09/2017-05/2018 (Contract)**
+
 The CDL is a seed-stage startup accelerator program for science/technology ventures.
 
 * Created a statistical model to predict seed-stage valuations based on characteristics of the venture
@@ -42,13 +47,26 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 ### University of Toronto, St. George
 **Class of 2017**
 **Honours Bachelor of Science, Double Major Statistics and Psychology**
+
 Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
 Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Learning
 
 # Skills
 
-* Python and R programming for machine learning and data analysis
+* Python and R programming for machine learning, data analysis, 
 
 * SQL
 
-* Excel (data analysis, dashboards, visualization, finance)
+* Excel (data analysis, dashboards, finance)
+
+# Links
+
+[Linkedin](https://www.linkedin.com/in/ben-tice/)
+
+[AngelList](https://angel.co/ben-tice)
+
+[Email](bentice49@gmail.com)
+
+[Github](https://github.com/bentice)
+
+[Kaggle](https://www.kaggle.com/bentice)
