@@ -1,123 +1,54 @@
 ---
 layout: default
 ---
+# Projects
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## Enron Corpus: Network and Linguistic Analysis
 
-[Link to another page](./another-page.html).
+Network Analysis of Enron Email Corpus for the purposes of testing theories proposed by Dr. James Pennebaker on use of pronouns in relation to social status. Used Various Centrality Algorithms as a measure of social status in the network to see if emails traveling up the hierarchy higher term frequency "I", "me", and "my" pronouns and emails traveling down the hierarchy higher term frequency "we", "us", and "ours" pronouns.
 
-There should be whitespace between paragraphs.
+## [Visualizing the 2018 Ontario Election]()
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018).
 
-# Header 1
+#Experience
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### [Creative Destruction Lab](https://www.creativedestructionlab.com/)
+**Research Analyst, 09/2017-05/2018 (Contract)**
+The CDL is a seed-stage startup accelerator program for science/technology ventures.
 
-## Header 2
+* Created a statistical model to predict seed-stage valuations based on characteristics of the venture
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+* Built Dashboards so that CDL team members could check key metrics
 
-### Header 3
+* Managed a monthly newsletter for the CDL network (graduate ventures, angel investors, Venture Capital).
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+* Updated social media accounts with news about CDL ventures.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+### University of Toronto Plaks Lab
+**Research Assistant, 09/2015-12/2015**
 
-#### Header 4
+* Selected from PSY426 Social Psychology of Motivational Theory class to assist in research.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+* Research by Ph.D candidate Jeffery Robinson studied the link between moral decision making and emotional response. 
 
-##### Header 5
+* Participants were asked to make moral decisions and their facial expressions were coded by micro-expression reading software.
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+* Aggregated relevant research to be cited in the final article.
 
-###### Header 6
+* Cleaned and prepped the data to be suitable for an academic presentation.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+# Education
+### University of Toronto, St. George
+**Class of 2017**
+**Honours Bachelor of Science, Double Major Statistics and Psychology**
+Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
+Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Learning
 
-### There's a horizontal rule below this.
+# Skills
 
-* * *
+* Python and R programming for machine learning and data analysis
 
-### Here is an unordered list:
+* SQL
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+* Excel (data analysis, dashboards, visualization, finance)
