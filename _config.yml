@@ -1,6 +1,10 @@
-title: Minimal theme
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
+title: Ben Tice
+logo: /assets/img/profilephoto.jpg
+description: Data Science Enthusiast
+linkedin: https://www.linkedin.com/in/ben-tice/
+email: bentice49@gmail.com
+github: https://github.com/bentice
+angellist: https://angel.co/ben-tice
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
