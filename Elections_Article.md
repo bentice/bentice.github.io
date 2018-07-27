@@ -1,8 +1,6 @@
 ---
 layout: default
-output:
-  html_document:
-    code_folding: hide
+codefold: code-fold
 ---
 
 
