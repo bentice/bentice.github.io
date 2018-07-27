@@ -1,6 +1,8 @@
 ---
 layout: default
-code_folding: hide
+output:
+  html_document:
+    code_folding: hide
 ---
 
 
@@ -294,7 +296,7 @@ U9k9N2vl5+cH0en0TRiGWX18fC65vnh+LxqNBq2oqFhgMpmi7XY7arVaj+zdu/fxn/l/4bSZl5fH
 
 
 
-```{python echo = FALSE}
+```python
 from cartopy import crs
 projt= crs.LambertCylindrical()
 wid = 600
@@ -302,14 +304,14 @@ ht = 850
 ```
 
 
-```{python echo = FALSE}
+```python
 from bokeh.models import ColumnDataSource, CategoricalColorMapper, ContinuousColorMapper
 from bokeh.plotting import figure, show, output_file
 from bokeh.palettes import Category20
 ```
 
 
-```{python echo = FALSE}
+```python
 from bokeh.layouts import row, column, gridplot
 from bokeh.palettes import Oranges3, Blues9, Reds7, Greens9
 ndpOr = Oranges3[:3][::-1]
@@ -319,7 +321,7 @@ gpgreen = Greens9[:4][::-1]
 ```
 
 
-```{python echo = FALSE}
+```python
 explicit_map= {'Liberal': libred[-1],
                'Green Party': gpgreen[0],
                'Conservative':pcblue[-2] ,
