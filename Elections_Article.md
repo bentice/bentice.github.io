@@ -22,7 +22,7 @@ layout: default
 
 
 
-```python
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>```python
 import os
 %matplotlib inline
 import pandas as pd
@@ -37,7 +37,7 @@ import fiona
 <form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
 
 
-```python
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>```python
 Mayor2010 = gpd.read_file('./Cleaned Data/2010_Toronto_Mayoral_Election.json')
 Mayor2014 = gpd.read_file('./Cleaned Data/2014_Toronto_Mayoral_Election.json')
 Ontario2014 = gpd.read_file('./Cleaned Data/2014_Ontario_Election.json')
