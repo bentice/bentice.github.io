@@ -19,7 +19,10 @@ layout: default
     $('div.input').hide()
   });
 </script>
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>```python
+
+
+
+```python
 import os
 %matplotlib inline
 import pandas as pd
@@ -31,6 +34,7 @@ import geopandas as gpd
 import geoviews as gv
 import fiona
 ```
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
 
 
 ```python
@@ -39,6 +43,7 @@ Mayor2014 = gpd.read_file('./Cleaned Data/2014_Toronto_Mayoral_Election.json')
 Ontario2014 = gpd.read_file('./Cleaned Data/2014_Ontario_Election.json')
 Ontario2018 = gpd.read_file('./Cleaned Data/2018_Ontario_Election.json')
 ```
+
 
 ## Ontario 2018
 
@@ -50,6 +55,9 @@ Two key factors that proved to be decisive in this Election was the polarization
 
 <p>Doug Ford, who became party leader in a leadership race in 2018 due to the resignation of Patrick Brown, was very popular in many parts of Toronto. He was a former city councler and brother of the late Rob Ford who served as mayor from 2010 to 2014. The Fords were popular in pre-amalgamation suburbs of Toronto ridings in these areas were important battle ground ridings for the all major parties in the 2018 provincial election.</p>
 
+<script>
+  code_toggle
+<script>
 
 ```python
 gv.extension('bokeh', 'matplotlib')
