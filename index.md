@@ -8,7 +8,7 @@ layout: default
 
 Network Analysis of Enron Email Corpus for the purposes of testing theories proposed by Dr. James Pennebaker on use of pronouns in relation to social status. Used Various Centrality Algorithms as a measure of social status in the network to see if emails traveling up the hierarchy higher term frequency "I", "me", and "my" pronouns and emails traveling down the hierarchy higher term frequency "we", "us", and "ours" pronouns.
 
-## [Visualizing the 2018 Ontario Election]()
+## [Visualizing the 2018 Ontario Election](Elections Article.md)
 
 Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018).
 
