@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <script>
   function code_toggle() {
     if (code_shown){
@@ -18,9 +19,7 @@ layout: default
     $('div.input').hide()
   });
 </script>
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
-
-```python
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>```python
 import os
 %matplotlib inline
 import pandas as pd
