@@ -22,7 +22,8 @@ layout: default
 
 
 
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>```python
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
+```python
 import os
 %matplotlib inline
 import pandas as pd
@@ -34,16 +35,17 @@ import geopandas as gpd
 import geoviews as gv
 import fiona
 ```
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
+</form>
 
 
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>```python
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code">
+  ```python
 Mayor2010 = gpd.read_file('./Cleaned Data/2010_Toronto_Mayoral_Election.json')
 Mayor2014 = gpd.read_file('./Cleaned Data/2014_Toronto_Mayoral_Election.json')
 Ontario2014 = gpd.read_file('./Cleaned Data/2014_Ontario_Election.json')
 Ontario2018 = gpd.read_file('./Cleaned Data/2018_Ontario_Election.json')
 ```
-
+</form>
 
 ## Ontario 2018
 
