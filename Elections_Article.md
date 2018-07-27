@@ -29,13 +29,13 @@ Ontario2018 = gpd.read_file('./Cleaned Data/2018_Ontario_Election.json')
 
 ## Ontario 2018
 
-In the Ontario general election of 2018 the Progressive Conservative Party, led by Doug Ford, won 76 of the 124 seats in the provincial parliament. The New Democratic Party, led by Andrea Horwath, gained the largest vote share and formed the Official Opposition with 40 seats. The Liberal Party, led by incumbent Premier Kathleen Wynne lost its official party status and recorded its worst result in the party's 161 year history. The Green Party won its first seat in the parties history. 
+<p>In the Ontario general election of 2018 the Progressive Conservative Party, led by Doug Ford, won 76 of the 124 seats in the provincial parliament. The New Democratic Party, led by Andrea Horwath, gained the largest vote share and formed the Official Opposition with 40 seats. The Liberal Party, led by incumbent Premier Kathleen Wynne lost its official party status and recorded its worst result in the party's 161 year history. The Green Party won its first seat in the parties history.</p>
   
-Two key factors that proved to be decisive in this Election was the polarization of the vote and Doug Ford's popularity in Toronto Ridings.
+Two key factors that proved to be decisive in this Election was the polarization of the vote and Doug Ford's popularity in Toronto Ridings:
 
-Polls leading up to the election showed that most voters were undecided but wanted change. This split the electorate with many previous liberal voters moving to the NDP or Conservatives. Although the NDP won the popular vote their vote share gains came from the Liberals where the Conservatives were incumbents.
+<p>Polls leading up to the election showed that most voters were undecided but wanted change. This split the electorate with many previous liberal voters moving to the NDP or Conservatives. Although the NDP won the popular vote their vote share gains came from the Liberals where the Conservatives were incumbents.</p>
 
-Doug Ford, who became party leader in a leadership race in 2018 due to the resignation of Patrick Brown, was very popular in many parts of Toronto. He was a former city councler and brother of the late Rob Ford who served as mayor from 2010 to 2014. The Fords were popular in pre-amalgamation suburbs of Toronto ridings in these areas were important battle ground ridings for the all major parties in the 2018 provincial election.
+<p>Doug Ford, who became party leader in a leadership race in 2018 due to the resignation of Patrick Brown, was very popular in many parts of Toronto. He was a former city councler and brother of the late Rob Ford who served as mayor from 2010 to 2014. The Fords were popular in pre-amalgamation suburbs of Toronto ridings in these areas were important battle ground ridings for the all major parties in the 2018 provincial election.</p>
 
 
 ```python
@@ -230,7 +230,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 
 
   <img src='data:image/png;base64,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'
-       style='height:15px; border-radius:12px; display: inline-block; float: left'></img>
+       style='height:15px; border-radius:12px; display: inline-block; float: left'>
   
 
 
@@ -296,7 +296,7 @@ U9k9N2vl5+cH0en0TRiGWX18fC65vnh+LxqNBq2oqFhgMpmi7XY7arVaj+zdu/fxn/l/4bSZl5fH
 
 
 
-```python
+```{python echo = FALSE}
 from cartopy import crs
 projt= crs.LambertCylindrical()
 wid = 600
@@ -304,14 +304,14 @@ ht = 850
 ```
 
 
-```python
+```{python echo = FALSE}
 from bokeh.models import ColumnDataSource, CategoricalColorMapper, ContinuousColorMapper
 from bokeh.plotting import figure, show, output_file
 from bokeh.palettes import Category20
 ```
 
 
-```python
+```{python echo = FALSE}
 from bokeh.layouts import row, column, gridplot
 from bokeh.palettes import Oranges3, Blues9, Reds7, Greens9
 ndpOr = Oranges3[:3][::-1]
@@ -321,7 +321,7 @@ gpgreen = Greens9[:4][::-1]
 ```
 
 
-```python
+```{python echo = FALSE}
 explicit_map= {'Liberal': libred[-1],
                'Green Party': gpgreen[0],
                'Conservative':pcblue[-2] ,
