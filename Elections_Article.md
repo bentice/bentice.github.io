@@ -1,8 +1,6 @@
 ---
 layout: default
-output:
-  html_notebook:
-    code_folding: hide
+code_folding: hide
 ---
 
 
