@@ -1,5 +1,8 @@
 ---
 layout: default
+output:
+	html_notebook:
+		code_folding: hide
 ---
 
 # Projects
