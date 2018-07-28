@@ -1,6 +1,7 @@
 ---
 layout: post
 ---
+# Visualizing the 2018 Ontario General Election
 
 <iframe src="/assets/img/Bokeh/results_18.html"
         sandbox="allow-same-origin allow-scripts"
