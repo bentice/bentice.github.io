@@ -1,29 +1,13 @@
 ---
-layout: default
+layout: post
 ---
 
-<script>
-  function code_toggle() {
-    if (code_shown){
-      $('div.input').hide('500');
-      $('#toggleButton').val('Show Code')
-    } else {
-      $('div.input').show('500');
-      $('#toggleButton').val('Hide Code')
-    }
-    code_shown = !code_shown
-  }
-
-  $( document ).ready(function(){
-    code_shown=false;
-    $('div.input').hide()
-  });
-</script>
 
 
 
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
-```python
+
+
+```{python echo=False}
 import os
 %matplotlib inline
 import pandas as pd
@@ -35,31 +19,33 @@ import geopandas as gpd
 import geoviews as gv
 import fiona
 ```
-</form>
 
-
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code">
-  ```python
+```{python echo=False}
 Mayor2010 = gpd.read_file('./Cleaned Data/2010_Toronto_Mayoral_Election.json')
 Mayor2014 = gpd.read_file('./Cleaned Data/2014_Toronto_Mayoral_Election.json')
 Ontario2014 = gpd.read_file('./Cleaned Data/2014_Ontario_Election.json')
 Ontario2018 = gpd.read_file('./Cleaned Data/2018_Ontario_Election.json')
 ```
-</form>
+<iframe src="/assets/img/Bokeh/title_g.html"
+        sandbox="allow-same-origin allow-scripts"
+        width="200%"
+        height="3000"
+        scrolling="no"
+        seamless="seamless"
+        frameborder="0">
+</iframe>
 
-## Ontario 2018
 
-<p>In the Ontario general election of 2018 the Progressive Conservative Party, led by Doug Ford, won 76 of the 124 seats in the provincial parliament. The New Democratic Party, led by Andrea Horwath, gained the largest vote share and formed the Official Opposition with 40 seats. The Liberal Party, led by incumbent Premier Kathleen Wynne lost its official party status and recorded its worst result in the party's 161 year history. The Green Party won its first seat in the parties history.</p>
+# Visualizing the 2018 Ontario General Election
+
+In the Ontario general election of 2018 the Progressive Conservative Party, led by Doug Ford, won 76 of the 124 seats in the provincial parliament. The New Democratic Party, led by Andrea Horwath, gained the largest vote share and formed the Official Opposition with 40 seats. The Liberal Party, led by incumbent Premier Kathleen Wynne lost its official party status and recorded its worst result in the party's 161 year history. The Green Party won its first seat in the parties history.
   
 Two key factors that proved to be decisive in this Election was the polarization of the vote and Doug Ford's popularity in Toronto Ridings:
 
-<p>Polls leading up to the election showed that most voters were undecided but wanted change. This split the electorate with many previous liberal voters moving to the NDP or Conservatives. Although the NDP won the popular vote their vote share gains came from the Liberals where the Conservatives were incumbents.</p>
+Polls leading up to the election showed that most voters were undecided but wanted change. This split the electorate with many previous liberal voters moving to the NDP or Conservatives. Although the NDP won the popular vote their vote share gains came from the Liberals where the Conservatives were incumbents.
 
-<p>Doug Ford, who became party leader in a leadership race in 2018 due to the resignation of Patrick Brown, was very popular in many parts of Toronto. He was a former city councler and brother of the late Rob Ford who served as mayor from 2010 to 2014. The Fords were popular in pre-amalgamation suburbs of Toronto ridings in these areas were important battle ground ridings for the all major parties in the 2018 provincial election.</p>
+Doug Ford, who became party leader in a leadership race in 2018 due to the resignation of Patrick Brown, was very popular in many parts of Toronto. He was a former city councler and brother of the late Rob Ford who served as mayor from 2010 to 2014. The Fords were popular in pre-amalgamation suburbs of Toronto ridings in these areas were important battle ground ridings for the all major parties in the 2018 provincial election.
 
-<script>
-  code_toggle
-<script>
 
 ```python
 gv.extension('bokeh', 'matplotlib')
@@ -319,7 +305,7 @@ U9k9N2vl5+cH0en0TRiGWX18fC65vnh+LxqNBq2oqFhgMpmi7XY7arVaj+zdu/fxn/l/4bSZl5fH
 
 
 
-```python
+```{python echo = FALSE}
 from cartopy import crs
 projt= crs.LambertCylindrical()
 wid = 600
@@ -327,14 +313,14 @@ ht = 850
 ```
 
 
-```python
+```{python echo = FALSE}
 from bokeh.models import ColumnDataSource, CategoricalColorMapper, ContinuousColorMapper
 from bokeh.plotting import figure, show, output_file
 from bokeh.palettes import Category20
 ```
 
 
-```python
+```{python echo = FALSE}
 from bokeh.layouts import row, column, gridplot
 from bokeh.palettes import Oranges3, Blues9, Reds7, Greens9
 ndpOr = Oranges3[:3][::-1]
@@ -344,17 +330,15 @@ gpgreen = Greens9[:4][::-1]
 ```
 
 
-```python
+```{python echo = FALSE}
 explicit_map= {'Liberal': libred[-1],
                'Green Party': gpgreen[0],
                'Conservative':pcblue[-2] ,
                'NDP':ndpOr[-1]}
 ```
 
-## Ontario 2018 Election Results
 
-
-```python
+```{python echo = FALSE}
 on18 = figure(title="Ontario Provincial Election 2018")
 
 ndprid = Ontario2018.loc[Ontario2018.First=='NDP']
@@ -446,22 +430,7 @@ ont18
 
 
 
-
-<div id='f485460c-0c25-40d6-ad49-7449cc16a794' style='display: table; margin: 0 auto;'>
-
-
-
-
-
-  <div class="bk-root" id="836d1d76-48cc-4931-a620-bc5f0c8c7533"></div>
-</div>
-
-
-
-## Runners up 
-
-
-```python
+```{python echo = FALSE}
 ru18 = figure(title="Second Biggest Vote Share in Ontario Election")
 ndprid = Ontario2018.loc[Ontario2018.Second=='NDP']
 pcrid = Ontario2018.loc[Ontario2018.Second=='Conservative']
@@ -530,16 +499,14 @@ ru18
 ```
 
 
-```python
-#ele18=figure(plot_width = 1000, plot_height=800)
+```{python echo = FALSE}(plot_width = 1000, plot_height=800)
 #ele18=(ont18 + ru18)
 #ele18
 ```
 
-## Ontario 2014 First and Second
 
-
-```python
+```{python echo = FALSE}
+# Ontario 2018 Election Results Map
 on14 = figure(plot_width = wid, plot_height=ht, title="Ontario Provincial Election 2018")
 
 ndprid = Ontario2014.loc[Ontario2014.First=='NDP']
@@ -617,7 +584,8 @@ ont14
 ```
 
 
-```python
+```{python echo = FALSE}
+# map of Runners up by riding in the 2018 
 ru14 = figure(plot_width = wid, plot_height=ht, title="Second Biggest Vote Share in Ontario Election")
 ndprid = Ontario2014.loc[Ontario2014.Second=='NDP']
 pcrid = Ontario2014.loc[Ontario2014.Second=='Conservative']
@@ -698,7 +666,7 @@ Most seats won from the Liberals went to the runners up of that seat in 2014. Th
 Doug Ford gained 41 seats nearly all of them were won in the Toronto and the surrounding suburbs. These were important seat gains to form the majority. He won the largest share of seats in the GTA for the Conservatives since 1995. The Liberals lost most of there seats in this area which lead to them loosing official party status with only 7 seats.
 
 
-```python
+```{python echo = FALSE}
 TO_riding_ids = [7, 19, 20, 21, 22, 25, 28, 29, 30, 41, 83, 93, 94, 95, 96,
                  97, 98, 101, 109, 110, 111, 112, 117, 120, 122]
 toronto18 = Ontario2018.loc[Ontario2018.RidingID.isin(TO_riding_ids)]
@@ -708,7 +676,7 @@ toronto14 = Ontario2014.loc[Ontario2014.RidingID.isin(TO_riding_ids14)]
 ```
 
 
-```python
+```{python echo = FALSE}
 wid = 600
 ht =  300
 tor14 = figure(plot_width = wid, plot_height=ht)
@@ -766,7 +734,7 @@ tor14
 ```
 
 
-```python
+```{python echo = FALSE}
 wid = 600
 ht =  300
 tor18 = figure(plot_width = wid, plot_height=ht)
@@ -835,10 +803,7 @@ output_file('tor_results_18.html')
 tor18
 ```
 
-## Mayor 2014
-
-
-```python
+```{python echo = FALSE}
 may14 =gv.Polygons(Mayor2014,
             vdims=['NAME', 'FORD_DOUG']).options(tools=['hover'],
                                                  width = 600,
