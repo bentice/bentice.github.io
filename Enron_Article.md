@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minima_page
 ---
 
 # Enron Email Corpus: Network and Linguistic Analysis of Hierarchy
