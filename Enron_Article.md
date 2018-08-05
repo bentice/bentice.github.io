@@ -702,15 +702,7 @@ c_corr.savefig("c_corr.png")
 c_corr
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x241c2c76780>
-
-
-
-
-![png](/assets/img/Enron/c_corr.png=700x700)
+![png](/assets/img/Enron/c_corr.png)
 
 
 In the heatmap above we use the pearson correlation and can see that most of the centrality measures are positively correlated. Closeness Centrality less so with the others and Difference of Degree Centrality has no correlation with the others except for a negative correlation with out degree which is expected.
