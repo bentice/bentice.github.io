@@ -974,7 +974,7 @@ In and out degree centrality were sharply contrasted in some key people like Jef
 </iframe>
 
 
-<iframe src="/assets/img/Enron/results_18.html"
+<iframe src="/assets/img/Enron/com_con_cent.html"
         sandbox="allow-same-origin allow-scripts"
         width = "700"
         height="700" 
