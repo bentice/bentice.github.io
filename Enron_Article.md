@@ -976,7 +976,7 @@ In and out degree centrality were sharply contrasted in some key people like Jef
 
 <iframe src="/assets/img/Enron/com_con_cent.html"
         sandbox="allow-same-origin allow-scripts"
-        width = "700"
+        width = "1000"
         height="700" 
         scrolling="no"
         seamless="seamless"
@@ -985,7 +985,7 @@ In and out degree centrality were sharply contrasted in some key people like Jef
 
 <iframe src="/assets/img/Enron/cent_iter.html"
         sandbox="allow-same-origin allow-scripts"
-        width = "700"
+        width = "1000"
         height="700"  
         scrolling="no"
         seamless="seamless"
