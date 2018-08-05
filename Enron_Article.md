@@ -367,22 +367,6 @@ pd_edges[['From', 'To', 'weight']]\
 </div>
 
 
-
-
-```{python, echo=FALSE}
-# tupleizes the rows
-# ghen is a holding dataframe which will be used again
-ghen = pd_edges[['From', 'To', 'weight']]\
-.groupby(['From', 'To'])\
-.count()\
-.reset_index()
-bnbn = ghen.itertuples(index=False, name=None)
-gma = []
-for t in bnbn:
-    gma.append(t)
-```
-
-
 ```python
 # creates a directed graph and adds weighted edges to it
 G = nx.DiGraph()
@@ -1187,133 +1171,7 @@ centrality_rank.sort_values(by=['median_rank'], ascending=[True]).head(15)
 In and out degree centrality were sharply contrasted in some key people like Jeff Skilling and Kenneth Lay. Because of this I decided to make another measure of difference degree centrality. This was the only centrality indicator that put Skilling, Lay, Whalley, Lavorato, and Kitchen all at the top of the hierarchy. It is possible that executive and management positions recieve communication from many sources but only send emails to a select few executives who delegate down the hierarchy. It is also possible that Emails they sent were not included in the public data set for legal reasons.
 
 
-```{python, echo=FALSE}
-#Dictionaries to map Email Centrality ranks with
-betw_dict = centrality_rank.set_index('Emails')['betweenness'].to_dict()
-closeness_dict = centrality_rank.set_index('Emails')['closeness'].to_dict()
-in_dict = centrality_rank.set_index('Emails')['in_degree'].to_dict()
-out_dict = centrality_rank.set_index('Emails')['out_degree'].to_dict()
-degree_dict = centrality_rank.set_index('Emails')['Degree_Centrality'].to_dict()
-diff_degree_dict = centrality_rank.set_index('Emails')['Diff_Degree_Centrality'].to_dict()
-median_dict = centrality_rank.set_index('Emails')['median_rank'].to_dict()
-```
 
-
-```{python, echo=FALSE}
-# other centrality measures
-#Betweenness
-ghen['f_between'] = ghen['From'].apply(lambda x: betw_dict[x])
-ghen['t_between'] = ghen['To'].apply(lambda x: betw_dict[x])
-ghen['delta_between'] = ghen.t_between.subtract(ghen['f_between'])
-# in_degree
-ghen['f_in_degree'] = ghen['From'].apply(lambda x: in_dict[x])
-ghen['t_in_degree'] = ghen['To'].apply(lambda x: in_dict[x])
-ghen['delta_in_degree'] = ghen.t_in_degree.subtract(ghen['f_in_degree'])
-# out_degree
-ghen['f_out_degree'] = ghen['From'].apply(lambda x: out_dict[x])
-ghen['t_out_degree'] = ghen['To'].apply(lambda x: out_dict[x])
-ghen['delta_out_degree'] = ghen.t_out_degree.subtract(ghen['f_out_degree'])
-# degree centrality
-ghen['f_degree'] = ghen['From'].apply(lambda x: degree_dict[x])
-ghen['t_degree'] = ghen['To'].apply(lambda x: degree_dict[x])
-ghen['delta_degree'] = ghen.t_degree.subtract(ghen['f_degree'])
-# degree centrality
-ghen['f_diff_degree'] = ghen['From'].apply(lambda x: diff_degree_dict[x])
-ghen['t_diff_degree'] = ghen['To'].apply(lambda x: diff_degree_dict[x])
-ghen['delta_diff_degree'] = ghen.t_diff_degree.subtract(ghen['f_diff_degree'])
-# closeness
-ghen['f_closeness'] = ghen['From'].apply(lambda x: closeness_dict[x])
-ghen['t_closeness'] = ghen['To'].apply(lambda x: closeness_dict[x])
-ghen['delta_closeness'] = ghen.t_closeness.subtract(ghen['f_closeness'])
-# closeness
-ghen['f_median_rank'] = ghen['From'].apply(lambda x: median_dict[x])
-ghen['t_median_rank'] = ghen['To'].apply(lambda x: median_dict[x])
-ghen['delta_median_rank'] = ghen.t_median_rank.subtract(ghen['f_median_rank'])
-```
-
-```{python, echo=FALSE}
-#functions to make graphing easier
-def add_node_attributes(graph, node_dict, attr_name):
-    """Add attributes to Multigraph from node_dictionary"""
-    for nod in graph.nodes():
-        graph.node[nod][attr_name] = node_dict[nod]
-
-def frozen_nodes_dict(graph):
-    """take a graph and return a dictionary of its nodes with only the username"""
-    rename_dict = dict()
-    for node in graph.nodes:
-        rename_dict.update({node: next(iter(node))[:-10]})
-        
-    return rename_dict
-```
-
-
-```{python, echo=FALSE}
-from holoviews.operation.datashader import datashade, bundle_graph #holoviews functions to make graphs easier to read
-
-
-def enron_network_graph(graph, num_nodes, cent_indicator, dim_size, node_size, color_map):
-    """Draws and interactive Network Graph displaying colors with a unique centrality indicator"""
-    # makes a list of the emails ranked above num_nodes
-    top_nodes = centrality_rank.loc[centrality_rank[cent_indicator]<=num_nodes]['Emails'].tolist()
-        
-    #creates a graph, adds position, creates a dict of the positions, and del the graph
-    P = nx.DiGraph(graph).subgraph(top_nodes).copy()
-    add_node_attributes(P, spring_pos, "Position")
-    nx.relabel_nodes(P, frozen_nodes_dict(P), copy=False)
-    pos = dict(P.nodes(data="Position"))
-    del P
-    #create the graph that will be used for the graph
-    D = nx.DiGraph(graph).subgraph(top_nodes).copy()
-    # add attribute to the graph
-    cent_ind_dict = centrality_rank.set_index('Emails')[cent_indicator].to_dict()
-    add_node_attributes(D, cent_ind_dict, cent_indicator)
-    # takes relabels the nodes to the username without @enron.com
-    nx.relabel_nodes(D, frozen_nodes_dict(D), copy=False)
-    # creates the interative graph
-    %%opts Graph [width=dim_size height=dim_size xaxis=None, yaxis=None colorbar=True]
-    %%opts Graph (node_size=10)
-    %%opts Graph (cmap=color_map node_size=node_size)
-    %%opts Graph [tools=['hover']] (edge_hover_line_color='green' node_hover_fill_color='green')
-    padding = dict(x=(-1.2, 1.2), y=(-1.2, 1.2)) 
-    enron=hv.Graph.from_networkx(D, nx.spring_layout, pos = pos, k=2, iterations=50).redim.range(**padding).options(color_index=cent_indicator)
-    #bundles the edges of the graph
-    bndl = bundle_graph(enron, decay=0.1, initial_bandwidth=0.2, iterations=1)
-    return bndl
-
-def enron_network_graph_iterations(graph, num_nodes, cent_indicator, dim_size, node_size, color_map, iterations):
-    """Draws and interactive Network Graph displaying colors with a unique centrality indicator"""
-    # makes a list of the emails ranked above num_nodes
-    top_nodes = centrality_rank.loc[centrality_rank[cent_indicator]<=num_nodes]['Emails'].tolist()
-        
-    #creates a graph, adds position, creates a dict of the positions, and del the graph
-    P = nx.DiGraph(graph).subgraph(top_nodes).copy()
-    add_node_attributes(P, spring_pos, "Position")
-    nx.relabel_nodes(P, frozen_nodes_dict(P), copy=False)
-    pos = dict(P.nodes(data="Position"))
-    del P
-    #create the graph that will be used for the graph
-    D = nx.DiGraph(graph).subgraph(top_nodes).copy()
-    # add attribute to the graph
-    cent_ind_dict = centrality_rank.set_index('Emails')[cent_indicator].to_dict()
-    add_node_attributes(D, cent_ind_dict, cent_indicator)
-    # takes relabels the nodes to the username without @enron.com
-    nx.relabel_nodes(D, frozen_nodes_dict(D), copy=False)
-    # creates the interative graph
-    %%opts Graph [width=dim_size height=dim_size xaxis=None, yaxis=None colorbar=True]
-    %%opts Graph (node_size=10)
-    %%opts Graph (cmap=color_map node_size=node_size)
-    %%opts Graph [tools=['hover']] (edge_hover_line_color='green' node_hover_fill_color='green')
-    padding = dict(x=(-1.2, 1.2), y=(-1.2, 1.2)) 
-    enron=hv.Graph.from_networkx(D, nx.spring_layout, pos = pos, k=2, iterations=iterations).redim.range(**padding).options(color_index=cent_indicator)
-    #bundles the edges of the graph
-    bndl = bundle_graph(enron, decay=0.1, initial_bandwidth=0.2, iterations=1)
-    return bndl
-
-def get_graph(iteration):
-    np.random.seed(10)
-    return enron_network_graph_iterations(graph, num_nodes, cent_indicator, dim_size, node_size, color_map, iterations=iteration)
-```
 
 
 ```{python, echo=FALSE}
@@ -1326,10 +1184,14 @@ diff_c = enron_network_graph(graph, num_nodes, 'Diff_Degree_Centrality', dim_siz
 hv.renderer('bokeh').save(diff_c, 'diff_d_cent')
 diff_c
 ```
-
-
-
-
+<iframe src="/assets/img/Enron/diff_d_cent.html"
+        sandbox="allow-same-origin allow-scripts"
+        width = "700"
+        height="700" 
+        scrolling="no"
+        seamless="seamless"
+        frameborder="0">
+</iframe>
 
 
 
@@ -1543,23 +1405,6 @@ em_corr
 
 ![png](/assets/img/Enron/all_email_corr.png)
 
-### Top Nodes
-
-```python
-ghen = ghen.loc[ghen['f_median_rank']>150].loc[ghen['t_median_rank']>150]
-```
-
-
-```{python, echo=FALSE}
-#spearman correlation as we are denoting a hierarchy centrality is monotonic
-ghen_corr=ghen.corr('spearman')
-sub_corr = ghen_corr[['FPS', 'SPS', 'TPS', 'its', 'FPP', 'TPP']]
-sns.set()
-f, ax = plt.subplots(figsize=(20, 20))
-em_corr=sns.heatmap(sub_corr, annot=True, linewidths=.5, ax=ax, cmap='coolwarm')
-em_corr.savefig("top_cent_corr.png")
-em_corr
-```
 
 ### Private Emails (n_recipients=1)
 
@@ -1662,23 +1507,6 @@ edge_content.head(10)
   </tbody>
 </table>
 </div>
-
-
-
-    C:\Users\benti\Anaconda3\envs\enron3\lib\site-packages\scipy\stats\stats.py:1713: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
-      return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
-    
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x241f9746a90>
-
-
-
-
-![png](output_52_2.png)
-
 
 
 ```python
