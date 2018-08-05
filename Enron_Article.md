@@ -4,7 +4,6 @@ layout: default
 
 # Enron Email Corpus: Network and Linguistic Analysis of Hierarchy
 
-
 ```python
 import numpy as np
 import email
