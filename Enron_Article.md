@@ -369,7 +369,7 @@ pd_edges[['From', 'To', 'weight']]\
 
 
 
-```{python echo=False}
+```{python, echo=FALSE}
 # tupleizes the rows
 # ghen is a holding dataframe which will be used again
 ghen = pd_edges[['From', 'To', 'weight']]\
@@ -402,6 +402,7 @@ nx.draw_networkx(G,
                  node_size=1,
                  arrows=False,
                  widths=0.4)
+#add some output
 ```
 
     C:\Users\benti\Anaconda3\envs\enron3\lib\site-packages\networkx\drawing\layout.py:499: RuntimeWarning: invalid value encountered in sqrt
@@ -935,7 +936,7 @@ c_corr
 
 
 
-![png](output_18_1.png)
+![png](/assets/img/Enron/c_corr.png)
 
 
 In the heatmap above we use the pearson correlation and can see that most of the centrality measures are positively correlated. Closeness Centrality less so with the others and Difference of Degree Centrality has no correlation with the others except for a negative correlation with out degree which is expected.
@@ -970,7 +971,7 @@ rank_corr
 
 
 
-![png](output_21_1.png)
+![png](/assets/img/Enron/rank_corr.png)
 
 
 In the heatmap above we use the spearman correlation and see that most of the centrality ranks are positively correlated. The spearman correlation is used because the assumption of normality is violated and using centrality indicators as measures of hierarchy we expect them to be monotonic.
@@ -1186,7 +1187,7 @@ centrality_rank.sort_values(by=['median_rank'], ascending=[True]).head(15)
 In and out degree centrality were sharply contrasted in some key people like Jeff Skilling and Kenneth Lay. Because of this I decided to make another measure of difference degree centrality. This was the only centrality indicator that put Skilling, Lay, Whalley, Lavorato, and Kitchen all at the top of the hierarchy. It is possible that executive and management positions recieve communication from many sources but only send emails to a select few executives who delegate down the hierarchy. It is also possible that Emails they sent were not included in the public data set for legal reasons.
 
 
-```{python echo= False}
+```{python, echo=FALSE}
 #Dictionaries to map Email Centrality ranks with
 betw_dict = centrality_rank.set_index('Emails')['betweenness'].to_dict()
 closeness_dict = centrality_rank.set_index('Emails')['closeness'].to_dict()
@@ -1198,7 +1199,7 @@ median_dict = centrality_rank.set_index('Emails')['median_rank'].to_dict()
 ```
 
 
-```{python echo= False}
+```{python, echo=FALSE}
 # other centrality measures
 #Betweenness
 ghen['f_between'] = ghen['From'].apply(lambda x: betw_dict[x])
@@ -1230,7 +1231,7 @@ ghen['t_median_rank'] = ghen['To'].apply(lambda x: median_dict[x])
 ghen['delta_median_rank'] = ghen.t_median_rank.subtract(ghen['f_median_rank'])
 ```
 
-```{python echo= False}
+```{python, echo=FALSE}
 #functions to make graphing easier
 def add_node_attributes(graph, node_dict, attr_name):
     """Add attributes to Multigraph from node_dictionary"""
@@ -1247,7 +1248,7 @@ def frozen_nodes_dict(graph):
 ```
 
 
-```{python echo= False}
+```{python, echo=FALSE}
 from holoviews.operation.datashader import datashade, bundle_graph #holoviews functions to make graphs easier to read
 
 
@@ -1315,7 +1316,7 @@ def get_graph(iteration):
 ```
 
 
-```{python echo= False}
+```{python, echo=FALSE}
 num_nodes = 100
 graph = G
 dim_size=700
@@ -1329,19 +1330,10 @@ diff_c
 
 
 
-<div id='b57f5d7e-e4ff-4044-a52c-c03710f08ede' style='display: table; margin: 0 auto;'>
 
 
 
-
-
-  <div class="bk-root" id="e7725cf8-6c80-40dc-b581-03de2e16b5fa"></div>
-</div>
-
-
-
-
-```{python echo= False}
+```{python, echo=FALSE}
 num_nodes = 100
 graph = G
 dim_size=700
@@ -1357,38 +1349,14 @@ hv.renderer('bokeh').save(CCcent, 'com_con_cent')
 hv.HoloMap(Ndlayout)
 ```
 
-<div class="hololayout row row-fluid">
-  <div class="holoframe" id="display_area69a61376948a4b98887b5298e3948b88">
-    <div id="_anim_img69a61376948a4b98887b5298e3948b88">
-      
-      <div id='240a8ccb-608a-49c6-befa-bca867dfd311' style='display: table; margin: 0 auto;'>
-
-
-
-
-
-  <div class="bk-root" id="af12fda7-90bb-4c63-9a90-c28753676ac0"></div>
-</div>
-      
-    </div>
-  </div>
-  <div class="holowidgets" id="widget_area69a61376948a4b98887b5298e3948b88">
-    <form class="holoform well" id="form69a61376948a4b98887b5298e3948b88">
-      
-      
-        <div class="form-group control-group holoformgroup" style=''>
-          <label for="textInput69a61376948a4b98887b5298e3948b88_Centrality_Indicator"><strong>Centrality Indicator:</strong></label>
-          <select class="holoselect form-control" id="_anim_widget69a61376948a4b98887b5298e3948b88_Centrality_Indicator" >
-          </select>
-        </div>
-        
-        
-        </form>
-    </div>
-</div>
-
-
-
+<iframe src="/assets/img/Enron/results_18.html"
+        sandbox="allow-same-origin allow-scripts"
+        width = "700"
+        height="700" 
+        scrolling="no"
+        seamless="seamless"
+        frameborder="0">
+</iframe>
 
 ```python
 num_nodes = 100
@@ -1401,48 +1369,14 @@ cent_iter = hv.HoloMap({i: get_graph(i)for i in range(2, 50, 3)}, kdims="Iterati
 hv.renderer('bokeh').save(cent_iter, 'cent_iter')
 hv.HoloMap({i: get_graph(i)for i in range(2, 50, 3)}, kdims="Iterations")
 ```
-
-
-
-
-<div class="hololayout row row-fluid">
-  <div class="holoframe" id="display_areaf21edcf7beb04f55ac95c97b2daea1c4">
-    <div id="_anim_imgf21edcf7beb04f55ac95c97b2daea1c4">
-      
-      <div id='96dc6521-e0db-4a60-99b8-7782ffdd6546' style='display: table; margin: 0 auto;'>
-
-
-
-
-
-  <div class="bk-root" id="17a5f481-f6d4-47d5-856d-d02ee2418e19"></div>
-</div>
-      
-    </div>
-  </div>
-  <div class="holowidgets" id="widget_areaf21edcf7beb04f55ac95c97b2daea1c4">
-    <form class="holoform well" id="formf21edcf7beb04f55ac95c97b2daea1c4">
-      
-      
-      <div class="form-group control-group holoformgroup" style=''>
-        <label for="textInputf21edcf7beb04f55ac95c97b2daea1c4_Iterations">
-          <strong>Iterations:</strong>
-        </label>
-        <div class="holowell">
-          <div class="hologroup">
-            <input type="text" class="holotext form-control input-small"
-                   id="textInputf21edcf7beb04f55ac95c97b2daea1c4_Iterations" value="" readonly>
-          </div>
-          <div class="holoslider"
-               id="_anim_widgetf21edcf7beb04f55ac95c97b2daea1c4_Iterations"></div>
-        </div>
-      </div>
-      
-        
-        </form>
-    </div>
-</div>
-
+<iframe src="/assets/img/Enron/cent_iter.html"
+        sandbox="allow-same-origin allow-scripts"
+        width = "700"
+        height="700"  
+        scrolling="no"
+        seamless="seamless"
+        frameborder="0">
+</iframe>
 
 
 ## Term Frequency of Pronouns
@@ -1607,7 +1541,7 @@ em_corr
 
 
 
-![png](output_44_1.png)
+![png](/assets/img/Enron/all_email_corr.png)
 
 ### Top Nodes
 
@@ -1616,7 +1550,7 @@ ghen = ghen.loc[ghen['f_median_rank']>150].loc[ghen['t_median_rank']>150]
 ```
 
 
-```{python echo=False}
+```{python, echo=FALSE}
 #spearman correlation as we are denoting a hierarchy centrality is monotonic
 ghen_corr=ghen.corr('spearman')
 sub_corr = ghen_corr[['FPS', 'SPS', 'TPS', 'its', 'FPP', 'TPP']]
@@ -1766,7 +1700,7 @@ em_corr
 
 
 
-![png](output_53_1.png)
+![png](/assets/img/Enron/private_email_corr.png)
 
 
 # Conclusion
