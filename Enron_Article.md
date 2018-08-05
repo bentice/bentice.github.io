@@ -1,8 +1,6 @@
 ---
-layout: minima_page
+layout: post
 ---
-
-# Enron Email Corpus: Network and Linguistic Analysis of Hierarchy
 
 ```python
 import numpy as np
