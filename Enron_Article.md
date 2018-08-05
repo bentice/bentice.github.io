@@ -184,7 +184,7 @@ nx.draw_networkx(G,
     
 
 
-![png](output_6_1.png=400x)
+![png]()
 
 
 This layout was drawn wth [Force-Directed Graph Algorithm](https://en.wikipedia.org/wiki/Force-directed_graph_drawing).These used 'weight' which corresponed to the number of emails sent between nodes. The more emails exchanged the closer nodes were brought together.
@@ -710,7 +710,7 @@ c_corr
 
 
 
-![png](/assets/img/Enron/c_corr.png=400x)
+![png](/assets/img/Enron/c_corr.png=700x700)
 
 
 In the heatmap above we use the pearson correlation and can see that most of the centrality measures are positively correlated. Closeness Centrality less so with the others and Difference of Degree Centrality has no correlation with the others except for a negative correlation with out degree which is expected.
@@ -993,14 +993,14 @@ In and out degree centrality were sharply contrasted in some key people like Jef
 
 ## Term Frequency of Pronouns
 
-We want to measure the term frequency of pronouns and compare them to the centrality difference between the Recipient (To) and the Sender (From). We expect that C<sub>$\Delta$</sub> centrality will have a negative correlation with use of First Person Singular (FPS) pronouns as emails travel down the hierarchy (For instance for people ranked 1 emailing someone ranked 30 C<sub>$\Delta$</sub> = 29) and a positive correlation with the use of First Person Plural (FPP) pronouns for emails traveling down the hierarchy.
+We want to measure the term frequency of pronouns and compare them to the centrality difference between the Recipient (To) and the Sender (From). We expect that C<sub>$\Delta$</sub> centrality will have a negative correlation with use of First Person Singular (FPS) pronouns as emails travel down the hierarchy (For instance for people ranked 1 emailing someone ranked 30 C<sub>\Delta</sub> = 29) and a positive correlation with the use of First Person Plural (FPP) pronouns for emails traveling down the hierarchy.
 
-C<sub>$\Delta$</sub>=C<sup>rank</sup><sub>To</sub> - C<sup>rank</sup><sub>From</sub>
-then as C<sub>$\Delta$</sub>->$-\infty$ will TF(FPS)->0 and as C<sub>$\Delta$</sub>->$\infty$ will TF(FPP)->1
+C<sub>\Delta</sub>=C<sup>rank</sup><sub>To</sub> - C<sup>rank</sup><sub>From</sub>
+then as C<sub>\Delta</sub>->-\infty will TF(FPS)->0 and as C<sub>$\Delta$</sub>->$\infty$ will TF(FPP)->1
 
-H<sub>null</sub>: Corr(C<sub>$\Delta$</sub>, TF(FPS)) = 0 and Corr(C<sub>$\Delta$</sub>, TF(FPP)) = 0
+H<sub>null</sub>: Corr(C<sub>\Delta</sub>, TF(FPS)) = 0 and Corr(C<sub>\Delta</sub>, TF(FPP)) = 0
 
-H<sub>alternative</sub>: Corr(C<sub>$\Delta$</sub>, TF(FPS)) <= -0.1 and/or Corr(C<sub>$\Delta$</sub>, TF(FPP)) >= 0.1
+H<sub>alternative</sub>: Corr(C<sub>\Delta</sub>, TF(FPS)) <= -0.1 and/or Corr(C<sub>\Delta</sub>, TF(FPP)) >= 0.1
 
 ```python
 edge_content = email_exchanges.groupby(['From', 'To'])['content'].apply(lambda x: x.str.cat(sep=' ')).reset_index()
