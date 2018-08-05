@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 ---
 
 # Enron Email Corpus: Network and Linguistic Analysis of Hierarchy
@@ -186,7 +186,7 @@ nx.draw_networkx(G,
     
 
 
-![png](output_6_1.png)
+![png](output_6_1.png=400x)
 
 
 This layout was drawn wth [Force-Directed Graph Algorithm](https://en.wikipedia.org/wiki/Force-directed_graph_drawing).These used 'weight' which corresponed to the number of emails sent between nodes. The more emails exchanged the closer nodes were brought together.
@@ -712,7 +712,7 @@ c_corr
 
 
 
-![png](/assets/img/Enron/c_corr.png)
+![png](/assets/img/Enron/c_corr.png=400x)
 
 
 In the heatmap above we use the pearson correlation and can see that most of the centrality measures are positively correlated. Closeness Centrality less so with the others and Difference of Degree Centrality has no correlation with the others except for a negative correlation with out degree which is expected.
