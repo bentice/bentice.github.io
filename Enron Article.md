@@ -1,4 +1,8 @@
 
+---
+layout: default
+---
+
 # Enron Email Corpus: Network and Linguistic Analysis of Hierarchy
 
 
