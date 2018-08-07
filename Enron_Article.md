@@ -3,8 +3,9 @@ layout: default
 ---
 # Enron Network and Linguistics Analysis
 
-Enron was an American energy company that went bankrupt in 2001. It was later revealed that the financial condition was sustained by institionalized, systematic, and creatively planned accounting fraud. The [Enron scandal](https://en.wikipedia.org/wiki/Enron_scandal), as it is now known, lead to the release of the Enron email corpus which was acquired by the Federal Energy Regulatory Commission during its investigation of the company's collapse. The corpus is unique as the only publicly available mass collections of real emails easily available for use in network analysis and machine learning.
+Enron was an american energy company that went bankrupt in 2001. It was later revealed that the financial condition was sustained by institionalized, systematic, and creatively planned accounting fraud. The [Enron scandal](https://en.wikipedia.org/wiki/Enron_scandal), as it is now known, lead to the release of the Enron email corpus which was acquired by the Federal Energy Regulatory Commission during its investigation of the company's collapse. The corpus is unique as the only publicly available mass collections of real emails easily available for use in network analysis and machine learning.
 
+In a series of studies Pennebaker found that lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition, he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network.
 
 
 ```python
@@ -202,7 +203,7 @@ If centrality indicators are going to be a good measure of hierarchy within a ne
 
 **Degree Centrality** is the measurement of total nodes that the node is connected to vs total nodes in the network.
 
-In Enron's case those that communicate often with more people compared to the number of people in the Enron Network overall. Degree Centrality has previously shown to be 83% accurate in predicting organizational dominance pair using their titles to deduce the organizational hierarchy [(Agarwal, Omuya, Harnly, Rambow, 2012)](http://www.cs.columbia.edu/~apoorv/NewHomepage/Publications_files/aclShort2012.pdf). In degree centrality notes how many different nodes any given node is connected to based communications towards them. This is important as mass emails might not confer dominance but rather a communications role. We will look at in and out degree contrasted as well.
+In Enron's case those that communicate often with more people compared to the number of people in the Enron Network overall. Degree Centrality has previously shown to be 83% accurate in predicting organizational dominance with the enron network using their titles to deduce the organizational hierarchy [(Agarwal, Omuya, Harnly, Rambow, 2012)](http://www.cs.columbia.edu/~apoorv/NewHomepage/Publications_files/aclShort2012.pdf). In degree centrality notes how many different nodes any given node is connected to based communications towards them. This is important as mass emails might not confer dominance but rather a communications role. We will look at in and out degree contrasted as well.
 
 
 ```python
