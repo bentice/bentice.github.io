@@ -686,7 +686,7 @@ c_corr.savefig("c_corr.png")
 c_corr
 ```
 
-<img src="/assets/img/Enron/c_corr.png" class="plain">
+<img src="/assets/img/Enron/c_corr.png" border = none >
 
 
 In the heat map above we use the Pearson correlation and can see that most of the centrality measures are positively correlated. Closeness centrality less so with the others and difference of degree centrality has no correlation with the others except for a negative correlation with out degree which is expected.
