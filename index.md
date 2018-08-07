@@ -6,11 +6,13 @@ layout: default
 
 ## [Enron Corpus: Network and Linguistic Analysis of Hierarchy](Enron_Article.md)
 
-Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes of replicating James Pennebaker's findings in ["Pronoun Use Reflects Standings in Social Hierarchies"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf). In a series of studies Pennebaker found that Lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network. 
+Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes of replicating James Pennebaker's findings in ["Pronoun Use Reflects Standings in Social Hierarchies"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf). In a series of studies Pennebaker found that lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition, he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network. This replication found no effect  of social status on the use of pronouns and social status within the network. However, questions still remain as to how predictive centrality measures are of social status within a hierarchy.
 
 ## [Visualizing the 2018 Ontario Election](Elections_Article.md)
 
 Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018).
+
+## More coming soon...
 
 # Experience
 
@@ -26,6 +28,16 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 * Managed a monthly newsletter for the CDL network (graduate ventures, angel investors, Venture Capital).
 
 * Updated social media accounts with news about CDL ventures.
+
+### Statistics Canada
+**Research Analyst, 05/2016-08/2016**
+
+* Secured 2016 census information from non-respondents. 
+
+* Tracked progress and actionable information for supervisors and fellow enumerators. 
+
+* Consistently achieved weekly targets for censuses collected. 
+
 
 ### University of Toronto Plaks Lab
 **Research Assistant, 09/2015-12/2015**
@@ -46,16 +58,19 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 **Honours Bachelor of Science, Double Major Statistics and Psychology**
 
 Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
+
 Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Learning
 
-# Skills
+# Tools and Skills
 
-* Python and R programming for machine learning, data analysis, 
+* Python and R programming for machine learning and data analysis 
 
 * SQL
 
-* Excel (data analysis, dashboards, finance)
+* Excel (data cleaning, data analysis, pivot tables, Dashboards)
+
+* Probability & Statistics, Hypothesis Testing, Data Visualization
 
 # Links
 
-[Linkedin](https://www.linkedin.com/in/ben-tice/) [AngelList](https://angel.co/ben-tice) [Github](https://github.com/bentice) [Kaggle](https://www.kaggle.com/bentice)
+[Linkedin](https://www.linkedin.com/in/ben-tice/)\t[AngelList](https://angel.co/ben-tice)\t[Github](https://github.com/bentice)\t[Kaggle](https://www.kaggle.com/bentice)
