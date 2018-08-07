@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
+# Enron Network and Linguistics Analysis
 
-The full notebook including data cleaning and preprocessing analysis can be viewed [here]()
+Enron was an American energy company that went bankrupt in 2001. It was later revealed that the financial condition was sustained by institionalized, systematic, and creatively planned accounting fraud. The [Enron scandal](https://en.wikipedia.org/wiki/Enron_scandal), as it is now known, lead to the release of the Enron email corpus which was acquired by the Federal Energy Regulatory Commission during its investigation of the company's collapse. The corpus is unique as the only publicly available mass collections of real emails easily available for use in network analysis and machine learning.
+
+
 
 ```python
 import numpy as np
@@ -19,8 +22,6 @@ hv.extension('bokeh')
 ```python
 # creates a dataframe of edges and their weights
 pd_edges = email_exchanges[['From', 'To']]
-#test['From'] = test['From'].map(lambda x: next(iter(x))[:-10])
-#test['To'] = test['To'].map(lambda x: next(iter(x))[:-10])
 pd_edges['weight'] = 1
 pd_edges[['From', 'To', 'weight']]\
 .groupby(['From', 'To'])\
@@ -165,7 +166,6 @@ nx.draw_networkx(G,
                  node_size=1,
                  arrows=False,
                  widths=0.4)
-#add some output
 ```
 
 ![png](/assets/img/Enron/total_enron.png)
@@ -173,9 +173,11 @@ nx.draw_networkx(G,
 
 This layout was drawn with [Force-Directed Graph Algorithm](https://en.wikipedia.org/wiki/Force-directed_graph_drawing). These used ‘weight’ which corresponded to the number of emails sent between nodes. The more emails exchanged the closer nodes were brought together.
 
+This basic drawing of the network is a birds-eye-view of the hierarchy. Executives and important employees would be at the center of the ring with many connections amongst each other and to the outer nodes.
+
 ## Hierarchy and Centrality Indicators
 
-If centrality indicators are going to be a good measure of hierarchy within a network it would have a high number of Enron Executives rated as most Central. Here are some executives to watch out for:
+If centrality indicators are going to be a good measure of hierarchy within a network it would have a high number of Enron Executives rated as most central. Here are some executives to watch out for:
 
 **Kenneth Lay** CEO and later Chairman
 
@@ -196,9 +198,11 @@ If centrality indicators are going to be a good measure of hierarchy within a ne
 
 
 
+
+
 **Degree Centrality** is the measurement of total nodes that the node is connected to vs total nodes in the network.
 
-In Enron's case those that communicate often with more people compared to the number of people in the Enron Network overall. Degree Centrality has previously shown to be 83% accurate in predicting organizational dominance pair using their titles to deduce the organizational hierarchy [(Agarwal, Omuya, Harnly, Rambow, 2012)](http://www.cs.columbia.edu/~apoorv/NewHomepage/Publications_files/aclShort2012.pdf). In degree centrality notes how many different nodes any given node is connected to based communications towards them. This is important as mass emails might not confer dominance but rather a communications role. We will look at in and out degree separately as well as together.
+In Enron's case those that communicate often with more people compared to the number of people in the Enron Network overall. Degree Centrality has previously shown to be 83% accurate in predicting organizational dominance pair using their titles to deduce the organizational hierarchy [(Agarwal, Omuya, Harnly, Rambow, 2012)](http://www.cs.columbia.edu/~apoorv/NewHomepage/Publications_files/aclShort2012.pdf). In degree centrality notes how many different nodes any given node is connected to based communications towards them. This is important as mass emails might not confer dominance but rather a communications role. We will look at in and out degree contrasted as well.
 
 
 ```python
@@ -554,7 +558,7 @@ e_centrality.sort_values(Algorithm, ascending=False).head(15)
 
 **Betweenness Centrality** Quantifies how many times a node acts as the shortest path between two nodes. 
 
-For our purposes, betweenness centrality should show Management Roles. Managers will often be the shortest path to other management and other departments. Some employees will communicate with their managers more than they will communicate with people from other departments.
+For our purposes, betweenness centrality should show management roles. Managers will often be the shortest path to other management and other departments. Some employees will communicate with their managers more than they will communicate with people from other departments.
 
 
 ```python
@@ -671,6 +675,7 @@ e_centrality.sort_values(Algorithm, ascending=False).head(15)
 </div>
 
 
+
 ```python
 Email_Centrality['Degree_Centrality'] = Email_Centrality[['in_degree', 'out_degree']].sum(axis=1)
 Email_Centrality['Diff_Degree_Centrality'] = Email_Centrality['in_degree'].subtract(Email_Centrality['out_degree'])
@@ -686,8 +691,16 @@ c_corr.savefig("c_corr.png")
 c_corr
 ```
 
-<img src="/assets/img/Enron/c_corr.png" class="plain">
+<img src="/assets/img/Enron/c_corr.png">
 
+
+<iframe src="/assets/img/Enron/c_corr.png"
+        width = "700"
+        height="700" 
+        seamless="seamless"
+        frameborder="0">
+</iframe>
+In and out degree centrality were sharply contrasted in some key people like Jeff Skilling and Kenneth Lay. Because of this, I decided to make another measure of difference degree centrality. This was the only centrality indicator that put Skilling, Lay, Whalley, Lavorato, and Kitchen all at the top of the hierarchy. It is possible that executive and management positions receive communication from many sources but only send emails to a select few executives who delegate down the hierarchy. It is also possible that emails they sent were not included in the public data set for legal reasons.
 
 In the heat map above we use the Pearson correlation and can see that most of the centrality measures are positively correlated. Closeness centrality less so with the others and difference of degree centrality has no correlation with the others except for a negative correlation with out degree which is expected.
 
@@ -715,16 +728,12 @@ rank_corr
 
 
 
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x241bc6b7550>
-
-
-
-
 ![png](/assets/img/Enron/rank_corr.png)
 
 
-In the heat map above we use the Spearman correlation and see that most of the centrality ranks are positively correlated. The Spearman correlation is used because the assumption of normality is violated and using centrality indicators as measures of hierarchy we expect them to be monotonic. 
+In the heat map above we use the Spearman correlation and see that most of the centrality ranks are highly correlated. Naturally, difference degree centrality is negatively correlated because it is the in degree minus the out degree. The Spearman correlation is used because using centrality indicators as measures of hierarchy we expect them to be monotonic.
+
+Below, Ordered by median rank we can see how many of the ranks differ. but many of the names of Enron executives that we were looking for are present. From looking at the most central emails we can see that many of our centrality indicators are a good measure of hierarchy within the Social Network.
 
 
 ```python
@@ -933,10 +942,16 @@ centrality_rank.sort_values(by=['median_rank'], ascending=[True]).head(15)
 </div>
 
 
+<iframe src="/assets/img/Enron/com_con_cent.html"
+        sandbox="allow-same-origin allow-scripts"
+        width = "1000"
+        height="700" 
+        scrolling="no"
+        seamless="seamless"
+        frameborder="0">
+</iframe>
 
-In and out degree centrality were sharply contrasted in some key people like Jeff Skilling and Kenneth Lay. Because of this, I decided to make another measure of difference degree centrality. This was the only centrality indicator that put Skilling, Lay, Whalley, Lavorato, and Kitchen all at the top of the hierarchy. It is possible that executive and management positions receive communication from many sources but only send emails to a select few executives who delegate down the hierarchy. It is also possible that Emails they sent were not included in the public data set for legal reasons. 
-
-
+This is an interactive map of the top 
 
 <iframe src="/assets/img/Enron/diff_d_cent.html"
         sandbox="allow-same-origin allow-scripts"
@@ -947,15 +962,6 @@ In and out degree centrality were sharply contrasted in some key people like Jef
         frameborder="0">
 </iframe>
 
-
-<iframe src="/assets/img/Enron/com_con_cent.html"
-        sandbox="allow-same-origin allow-scripts"
-        width = "1000"
-        height="700" 
-        scrolling="no"
-        seamless="seamless"
-        frameborder="0">
-</iframe>
 
 <iframe src="/assets/img/Enron/cent_iter.html"
         sandbox="allow-same-origin allow-scripts"
@@ -969,22 +975,25 @@ In and out degree centrality were sharply contrasted in some key people like Jef
 
 ## Term Frequency of Pronouns
 
-We want to measure the term frequency of pronouns and compare them to the centrality difference between the Recipient (To) and the Sender (From).  We expect that C<sub>\Delta</sub> centrality will have a negative correlation with use of First Person Singular (FPS) pronouns as emails travel down the hierarchy (For instance for people ranked 1 emailing someone ranked 30 C<sub>\Delta</sub> = 29) and a positive correlation with the use of First Person Plural (FPP) pronouns for emails traveling down the hierarchy.
+We want to measure the term frequency of pronouns and compare them to the centrality difference between the Recipient (To) and the Sender (From). We expect that C<sub>Delta</sub> centrality will have a negative correlation with use of First Person Singular (FPS) pronouns as emails travel down the hierarchy (for instance for people ranked 1 emailing someone ranked 30 C<sub>Delta</sub> = 29) and a positive correlation with the use of First Person Plural (FPP) pronouns for emails traveling down the hierarchy.
 
-C<sub>\Delta</sub>=C<sup>rank</sup><sub>To</sub> - C<sup>rank</sup><sub>From</sub>
-then as C<sub>\Delta</sub>->-\infty will TF(FPS)->0 and as C<sub>\Delta</sub>->\infty will TF(FPP)->1
+Let
+C<sub>Delta</sub> = C<sup>rank</sup><sub>To</sub> - C<sup>rank</sup><sub>From</sub>
 
-H<sub>null</sub>: Corr(C<sub>\Delta</sub>, TF(FPS)) = 0 and Corr(C<sub>\Delta</sub>, TF(FPP)) = 0
 
-H<sub>alternative</sub>: Corr(C<sub>\Delta</sub>, TF(FPS)) <= -0.1 and/or Corr(C<sub>\Delta</sub>, TF(FPP)) >= 0.1
+then as C<sub>Delta</sub>->-infty will TF(FPS)->0 and as C<sub>Delta</sub>->infty will TF(FPP)->1
+
+Our hypotheses:
+
+H<sub>null</sub>: Corr(C<sub>Delta</sub>, TF(FPS)) = 0 and Corr(C<sub>Delta</sub>, TF(FPP)) = 0
+
+
+H<sub>alternative</sub>: Corr(C<sub>Delta</sub>, TF(FPS)) <= -0.1 and/or Corr(C<sub>Delta</sub>, TF(FPP)) >= 0.1
 
 ```python
 edge_content = email_exchanges.groupby(['From', 'To'])['content'].apply(lambda x: x.str.cat(sep=' ')).reset_index()
 edge_content.head(10) #concatination of all emails between two nodes
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -1111,20 +1120,17 @@ em_corr.savefig("all_email_corr.png")
 em_corr
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x241f61c7898>
-
-
-
-
 ![png](/assets/img/Enron/all_email_corr.png)
 
+The correlation matix above does not find an effect above our + or - 0.1 threshold between various delta centralities and pronoun types.
 
-### Private Emails (n_recipients=1)
+There are correlations between the from centrality and pronouns types for instance highly ranked employees by in_degree were significantly less likely to use First Person Singular (FPS) pronouns (r<sub>s</sub>=-0.13) and also less likely to use First Person Plural (FPP) pronouns (r<sub>s</sub>=-0.11). This is interesting as it is at least partial evidence for Pennebakers hypothesis that high-status individuals use less FPS pronouns than low-status individuals. It is also evidence against his finding that high-status individuals use more FPP pronouns.
 
-Emails sent to more than one recipient may cause senders to use pronouns differently. Below we do the same analysis correspondents that include only two people.
+Difference degree centrality of from nodes also found that higher-status individuals were more likely to use Second Person Singular (SPS) pronouns (r<sub>s</sub>=0.12). This means that when sending emails these people were more likely to be using imperative sentences. Difference degree centrality was a measure of the difference between in and out connected nodes which means these individuals had many different people email them than they emailed themselves. This was a good indication of the top two executives Skilling and Lay. The correlation could signal that when these nodes sent emails were more likely to be commands.
+
+### One to One Correspondences (N recipients=1)
+
+Emails sent to more than one recipient may cause senders to use pronouns differently. Below we do the same analysis correspondents that include only one to one correspondences.
 
 
 ```python
@@ -1237,18 +1243,18 @@ em_corr
 ```
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x241f74d27f0>
-
-
-
-
 ![png](/assets/img/Enron/private_email_corr.png)
 
+There were no findings here to indicate a relationship between centrality and pronoun usage. This could because one to one emails were more likely to happend between equals and so power dynamics were less of a factor.
 
 # Conclusion
 
-These tests find little to no correlation between the term frequency of pronoun categories and social status within a hierarchy indicated by measures of centrality. The findings are evidence contrary to those in [Pennebaker's Paper](). A small correlation effect was found for delta degree difference centrality (r<sub>s</sub>=0.1) which measured the difference between in and out centrality. Although, this measure of centrality correctly ranked many executives the effect might also be due to the influence of number of correspondences and therefore the number of pronouns generally.
+These tests find little to no correlation between the term frequency of pronoun categories and social status dynamic between the sender and reciever of emails. Some of the findings do confirm some of Pennebaker's findings. Notably, in degree centrality and difference degree centrality showed evidence of power dynamics at play in the intra-Enron social network. High-status individuals measured by in degree were less likely to use first person singular pronouns as well as first person plural pronouns. High-status difference degree were measured to use more second person pronouns perhaps indicating more imperitive sentences. The findings both support and go contrary to those in [Pennebaker's Paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf).
 
-The centrality measures above did rank top executives highly it was not clear that it continued to be predictive for email accounts with lower centrality. This might have played a role in the results.
+The dynamic that Pennebaker proposed did not manifest itself in communication between nodes. The corrleation between pronoun usage and the difference of centrality were close to zero (-0.1>r<sub>s</sub><0.1)
+
+The centrality measures above did rank top executives highly but it was not clear that it continued to be predictive for email accounts with lower centrality. The centrality measures might not capture nodes of equal rank. After the top eschelon of Enron nodes would start to have many more equals than subordinates or superiours and would communicate on this basis. The centrality rank would not reflect this.
+
+Using the communications of a social network to map the social hierarchy is problematic. Some roles may require a dispropotionate representation in the communication network. Secretaries of Executives might rank higher than upper level management because of their position as an intermediary. These caveats should be taken into account when considering the findings.
+
+The full notebook including data cleaning and preprocessing analysis can be viewed [here]() and the full network analysis can be viewed [here]().
