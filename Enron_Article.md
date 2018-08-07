@@ -693,13 +693,6 @@ c_corr
 
 ![png](/assets/img/Enron/c_corr.png)
 
-<img src="/assets/img/Enron/c_corr.png">
-
-
-<iframe src="/assets/img/Enron/c_corr.png"
-        seamless="seamless"
-        frameborder="0">
-</iframe>
 In and out degree centrality were sharply contrasted in some key people like Jeff Skilling and Kenneth Lay. Because of this, I decided to make another measure of difference degree centrality. This was the only centrality indicator that put Skilling, Lay, Whalley, Lavorato, and Kitchen all at the top of the hierarchy. It is possible that executive and management positions receive communication from many sources but only send emails to a select few executives who delegate down the hierarchy. It is also possible that emails they sent were not included in the public data set for legal reasons.
 
 In the heat map above we use the Pearson correlation and can see that most of the centrality measures are positively correlated. Closeness centrality less so with the others and difference of degree centrality has no correlation with the others except for a negative correlation with out degree which is expected.
@@ -733,7 +726,7 @@ rank_corr
 
 In the heat map above we use the Spearman correlation and see that most of the centrality ranks are highly correlated. Naturally, difference degree centrality is negatively correlated because it is the in degree minus the out degree. The Spearman correlation is used because using centrality indicators as measures of hierarchy we expect them to be monotonic.
 
-Below, Ordered by median rank we can see how many of the ranks differ. but many of the names of Enron executives that we were looking for are present. From looking at the most central emails we can see that many of our centrality indicators are a good measure of hierarchy within the Social Network.
+Below, ordered by median rank, we can see how many of the ranks differ. but many of the names of Enron executives that we were looking for are present. From looking at the most central emails we can see that many of our centrality indicators are a good measure of hierarchy within the social network.
 
 
 ```python
@@ -951,7 +944,9 @@ centrality_rank.sort_values(by=['median_rank'], ascending=[True]).head(15)
         frameborder="0">
 </iframe>
 
-This is an interactive map of the top 
+This is an interactive map showing the most central node and their arrangement in a force directed graph. Dark red are the most important nodes ranked. Ideally our highly ranked nodes would show up in the center of our graph.
+
+Below difference degree centrality is a good example as nodes in the center are closer to dark red.
 
 <iframe src="/assets/img/Enron/diff_d_cent.html"
         sandbox="allow-same-origin allow-scripts"
@@ -962,6 +957,7 @@ This is an interactive map of the top
         frameborder="0">
 </iframe>
 
+Here is a look at the force directed graph working through the iterations from the inital point that these nodes had when using the whole network. They are colored using difference degree centrality.
 
 <iframe src="/assets/img/Enron/cent_iter.html"
         sandbox="allow-same-origin allow-scripts"
@@ -1257,4 +1253,4 @@ The centrality measures above did rank top executives highly but it was not clea
 
 Using the communications of a social network to map the social hierarchy is problematic. Some roles may require a dispropotionate representation in the communication network. Secretaries of Executives might rank higher than upper level management because of their position as an intermediary. These caveats should be taken into account when considering the findings.
 
-The full notebook including data cleaning and preprocessing analysis can be viewed [here]() and the full network analysis can be viewed [here]().
+The full notebook including data cleaning and preprocessing analysis can be viewed [here](Enron_Data_Prep.slides.html) and the full network analysis can be viewed [here](Enron_Article.slides.html).
