@@ -168,7 +168,7 @@ nx.draw_networkx(G,
 #add some output
 ```
 
-![png](/assets/img/Enron/Total_Enron.png)
+![png](/assets/img/Enron/total_enron.png)
 
 
 This layout was drawn with [Force-Directed Graph Algorithm](https://en.wikipedia.org/wiki/Force-directed_graph_drawing). These used ‘weight’ which corresponded to the number of emails sent between nodes. The more emails exchanged the closer nodes were brought together.
