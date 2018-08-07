@@ -695,8 +695,8 @@ c_corr
 
 
 <iframe src="/assets/img/Enron/c_corr.png"
-        width = "700"
-        height="700" 
+        width = "400"
+        height="400" 
         seamless="seamless"
         frameborder="0">
 </iframe>
