@@ -73,4 +73,4 @@ Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Lear
 
 # Links
 
-[Linkedin](https://www.linkedin.com/in/ben-tice/)\t[AngelList](https://angel.co/ben-tice)\t[Github](https://github.com/bentice)\t[Kaggle](https://www.kaggle.com/bentice)
+[Linkedin](https://www.linkedin.com/in/ben-tice/)	[AngelList](https://angel.co/ben-tice)	[Github](https://github.com/bentice)	[Kaggle](https://www.kaggle.com/bentice)
