@@ -691,6 +691,8 @@ c_corr.savefig("c_corr.png")
 c_corr
 ```
 
+![png](/assets/img/Enron/c_corr.png)
+
 <img src="/assets/img/Enron/c_corr.png">
 
 
