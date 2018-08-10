@@ -1248,7 +1248,7 @@ There were no findings here to indicate a relationship between centrality and pr
 
 These tests find little to no correlation between the term frequency of pronoun categories and social status dynamic between the sender and reciever of emails. Some of the findings do confirm some of Pennebaker's findings. Notably, in degree centrality and difference degree centrality showed evidence of power dynamics at play in the intra-Enron social network. High-status individuals measured by in degree were less likely to use first person singular pronouns as well as first person plural pronouns. High-status difference degree were measured to use more second person pronouns perhaps indicating more imperative sentences. The findings both support and go contrary to those in [Pennebaker's Paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf).
 
-The dynamic that Pennebaker proposed did not manifest itself in communication between nodes. The corrleation between pronoun usage and the difference of centrality were close to zero (-0.1>r<sub>s</sub><0.1)
+The dynamic that Pennebaker proposed did not manifest itself in communication between nodes. The corrleation between pronoun usage and the difference of centrality were close to zero (-0.1<r<sub>s</sub><0.1)
 
 The centrality measures above did rank top executives highly but it was not clear that it continued to be predictive for email accounts with lower centrality. The centrality measures might not capture nodes of equal rank. After the top eschelon of Enron nodes would start to have many more equals than subordinates or superiours and would communicate on this basis. The centrality rank would not reflect this.
 
