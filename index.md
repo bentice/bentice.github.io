@@ -44,7 +44,7 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 
 * Selected from PSY426 Social Psychology of Motivational Theory class to assist in research.
 
-* Research by Ph.D candidate Jeffery Robinson studied the link between moral decision making and emotional response. 
+* Research that studied the link between moral decision making and emotional response. 
 
 * Participants were asked to make moral decisions and their facial expressions were coded by micro-expression reading software.
 
