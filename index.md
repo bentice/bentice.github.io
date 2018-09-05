@@ -12,7 +12,6 @@ Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes 
 
 Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018).
 
-## More coming soon...
 
 # Experience
 
