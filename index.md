@@ -4,6 +4,10 @@ layout: default
 
 # Projects
 
+## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
+
+Mapping US restaurants and finding the most competitive zipcodes for restaurants across the major metropolitan areas.
+
 ## [Enron Corpus: Network and Linguistic Analysis](Enron_Article.md)
 
 Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes of replicating James Pennebaker's findings in ["Pronoun Use Reflects Standings in Social Hierarchies"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf). In a series of studies Pennebaker found that lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition, he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network. This replication provided evidence contrary and aligned with Pennebaker's findings. However, questions still remain as to how predictive centrality measures are of social status within a hierarchy.
