@@ -6,7 +6,7 @@ layout: default
 
 ## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
 
-Mapping US restaurants and finding the most competitive zipcodes for restaurants across the major metropolitan areas.
+Mapping US restaurants and finding the most competitive ZIP codes for restaurants across the major metropolitan areas.
 
 ## [Enron Corpus: Network and Linguistic Analysis](Enron_Article.md)
 
