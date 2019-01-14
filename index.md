@@ -20,7 +20,7 @@ Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest
 # Experience
 
 ### [Creative Destruction Lab](https://www.creativedestructionlab.com/)
-**Research Analyst, 09/2017-05/2018 (Contract)**
+**Research Analyst, 09/2017-09/2018**
 
 The CDL is a seed-stage startup accelerator program for science/technology ventures.
 
@@ -33,7 +33,7 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 * Updated social media accounts with news about CDL ventures.
 
 ### Statistics Canada
-**Research Analyst, 05/2016-08/2016**
+**Enumerator, 05/2016-08/2016**
 
 * Secured 2016 census information from non-respondents. 
 
