@@ -19,6 +19,22 @@ Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest
 
 # Experience
 
+### [Acuity Ads](https://www.acuityads.com/)
+**Campaign Manager Analytics, 09/2018-Present**
+
+Acuity Ads is a Demand Side Digital Advertising Platform 
+
+* Managed $1 Million in display Advertising Spend
+
+* Maintained and formed new relationships with over 30+ clients
+
+* Updated a legacy internal application with taking input from other Campaign Managers
+
+* Wrote Basic Python Application for my coworkers to make a routine excel task quick and easy
+
+* Taught myself JavaScript to better communicate with client development teams
+
+
 ### [Creative Destruction Lab](https://www.creativedestructionlab.com/)
 **Research Analyst, 09/2017-09/2018**
 
