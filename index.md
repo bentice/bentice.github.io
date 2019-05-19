@@ -24,25 +24,29 @@ Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest
 
 Acuity Ads is a Demand Side Digital Advertising Platform 
 
-* Managed $1 Million in display Advertising Spend
+* Managed over $500,000 in AdSpend.
 
-* Maintained and formed new relationships with over 30+ clients
+* Maintained and formed new relationships with over 40+ advertisers.
 
-* Updated a legacy internal application with taking input from other Campaign Managers
+* Created data visualizations to educate clients, campaign managers, and sales about their ad campaigns.
 
-* Wrote Basic Python Application for my coworkers to make a routine excel task quick and easy
+* Updated and further developed an internal analytics application using input from the daily users.
 
-* Taught myself JavaScript to better communicate with client development teams
+* Wrote an application in python that automated a time consuming manual process.
+
+* Learned web development fundamentals and educated my team members to help them communicate better pixel placement.
+
+* Advised product team from the perspective of a daily user on current and new features.
 
 
 ### [Creative Destruction Lab](https://www.creativedestructionlab.com/)
-**Research Analyst, 09/2017-09/2018**
+**Research Analyst, 09/2017-08/2018**
 
 The CDL is a seed-stage startup accelerator program for science/technology ventures.
 
-* Created a statistical model to predict seed-stage valuations based on characteristics of the venture
+* Created a statistical model to predict seed-stage valuations based on characteristics of the venture.
 
-* Built Dashboards so that CDL team members could check key metrics
+* Built Dashboards so that CDL team members could check key metrics.
 
 * Managed a monthly newsletter for the CDL network (graduate ventures, angel investors, Venture Capital).
 
@@ -85,6 +89,8 @@ Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Lear
 * Python and R programming for machine learning and data analysis 
 
 * SQL
+
+* HTML5, CSS, Javascript
 
 * Excel (data cleaning, data analysis, pivot tables, Dashboards)
 
