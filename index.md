@@ -4,6 +4,16 @@ layout: default
 
 # Projects
 
+## [My CodeSandbox Profile](https://codesandbox.io/u/bentice)
+
+A few projects I've been working on using React. More soon to come!
+
+    * [Chirper](https://smokc.codesandbox.io/) a twitter like app using Redux for state management.
+
+    * [My Reads](https://v3jfp.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
+
+
+
 ## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
 
 Mapping US restaurants and finding the most competitive ZIP codes for restaurants across the major metropolitan areas.
