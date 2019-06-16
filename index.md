@@ -13,14 +13,13 @@ A few projects I've been working on using React. More soon to come!
 * [My Reads](https://v3jfp.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
 
 
-
 ## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
 
 Mapping US restaurants and finding the most competitive ZIP codes for restaurants across the major metropolitan areas.
 
 ## [Enron Corpus: Network and Linguistic Analysis](Enron_Article.md)
 
-Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes of replicating James Pennebaker's findings in ["Pronoun Use Reflects Standings in Social Hierarchies"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf). In a series of studies Pennebaker found that lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition, he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network. This replication provided evidence contrary and aligned with Pennebaker's findings. However, questions still remain as to how predictive centrality measures are of social status within a hierarchy.
+Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes of replicating James Pennebaker's findings in ["Pronoun Use Reflects Standings in Social Hierarchies"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf). In a series of studies Pennebaker found that lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition, he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network. This replication provided evidence both contrary and aligned with Pennebaker's findings. However, questions still remain as to how predictive centrality measures inferred from email communications are of social status within an hierarchy.
 
 ## [Visualizing the 2018 Ontario Election](Elections_Article.md)
 
@@ -40,11 +39,9 @@ Acuity Ads is a Demand Side Digital Advertising Platform
 
 * Created data visualizations to educate clients, campaign managers, and sales about their ad campaigns.
 
-* Updated and further developed an internal analytics application using input from the daily users.
+* Updated and further developed an internal analytics application using input from daily users.
 
-* Wrote an application in python that automated a time consuming manual process.
-
-* Learned web development fundamentals and educated my team members to help them communicate better pixel placement.
+* Developed an application in python that automated a time consuming manual process.
 
 * Advised product team from the perspective of a daily user on current and new features.
 
@@ -86,25 +83,28 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 * Cleaned and prepped the data to be suitable for an academic presentation.
 
 # Education
+
 ## University of Toronto, St. George
 **Class of 2017**
 **Honours Bachelor of Science, Double Major Statistics and Psychology**
 
 Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
 
-Udacity Courses: Intro to Relational Databases, SQL for Data Analysis, Deep Learning
+## Udacity
+[**React Nanodegree May 2019**](https://www.udacity.com/course/react-nanodegree--nd019)
+
 
 # Tools and Skills
 
 * Python and R programming for machine learning and data analysis 
 
+* Javascript
+
+* React and Redux
+
 * SQL
 
-* HTML5, CSS, Javascript
-
-* Excel (data cleaning, data analysis, pivot tables, Dashboards)
-
-* Probability & Statistics, Hypothesis Testing, Data Visualization
+* Probability & Statistics, Hypothesis Testing
 
 # Links
 
