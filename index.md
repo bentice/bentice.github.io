@@ -8,9 +8,9 @@ layout: default
 
 A few projects I've been working on using React. More soon to come!
 
-    * [Chirper](https://smokc.codesandbox.io/) a twitter like app using Redux for state management.
+* [Chirper](https://smokc.codesandbox.io/) a twitter like app using Redux for state management.
 
-    * [My Reads](https://v3jfp.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
+* [My Reads](https://v3jfp.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
 
 
 
