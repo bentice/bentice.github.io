@@ -4,7 +4,7 @@ layout: default
 
 # Projects
 
-## [CodeSandbox Profile](https://codesandbox.io/u/bentice)
+## [CodeSandbox](https://codesandbox.io/u/bentice)
 
 A few projects I've been working on using React.
 
