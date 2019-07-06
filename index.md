@@ -4,13 +4,15 @@ layout: default
 
 # Projects
 
-## [My CodeSandbox Profile](https://codesandbox.io/u/bentice)
+## [CodeSandbox Profile](https://codesandbox.io/u/bentice)
 
-A few projects I've been working on using React. More soon to come!
+A few projects I've been working on using React.
 
-* [Chirper](https://smokc.codesandbox.io/) a twitter like app using Redux for state management.
+* [Lord of the Rings Twitter](https://67gry.codesandbox.io/) a Lord of the Rings themed twitter app using Redux for state management.
 
-* [My Reads](https://v3jfp.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
+* [Shelves](https://v3jfp.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
+
+* [Would You Rather Star Wars](https://6p7k8.codesandbox.io/) a Star Wars Would You Rather Game using React, Redux, and Ant Design 
 
 
 ## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
