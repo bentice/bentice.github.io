@@ -35,17 +35,15 @@ Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest
 
 Acuity Ads is a Demand Side Digital Advertising Platform 
 
-* Managed over $500,000 in AdSpend.
+* Updated and Developed an internal analytics application using SQL, PHP, and JavaScript.
 
-* Maintained and formed new relationships with over 40+ advertisers.
-
-* Created data visualizations to educate clients, campaign managers, and sales about their ad campaigns.
-
-* Updated and further developed an internal analytics application using input from daily users.
-
-* Developed an application in python that automated a time consuming manual process.
+* Developed an python application that automated a previously time consuming data cleaning process.
 
 * Advised product team from the perspective of a daily user on current and new features.
+
+* Managed over $1 million in Ad Spend.
+
+* Maintained and formed new relationships with over 40+ advertisers.
 
 
 ### [Creative Destruction Lab](https://www.creativedestructionlab.com/)
