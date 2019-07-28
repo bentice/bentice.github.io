@@ -37,7 +37,7 @@ Acuity Ads is a Demand Side Digital Advertising Platform
 
 * Updated and Developed an internal analytics application using SQL, PHP, and JavaScript.
 
-* Developed an python application that automated a previously time consuming data cleaning process.
+* Developed a python application that automated a previously time consuming data cleaning process.
 
 * Advised product team from the perspective of a daily user on current and new features.
 
