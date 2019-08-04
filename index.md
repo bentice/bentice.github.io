@@ -12,7 +12,9 @@ A few projects I've been working on using React.
 
 * [Shelves](https://3soz4.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
 
-* [Would You Rather Star Wars](https://6p7k8.codesandbox.io/) a Star Wars Would You Rather Game using React, Redux, and Ant Design 
+* [Star Wars Would You Rather](https://8jq54.csb.app/#/) a Star Wars Would You Rather Game using React, Redux, and Ant Design
+
+* [Mobile-Flashcards](https://github.com/bentice/mobile-flashcards) a mobile app for making flashcards and quizing yourself made with react native.
 
 
 ## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
@@ -91,20 +93,16 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
 
 ## Udacity
-[**React Nanodegree May 2019**](https://www.udacity.com/course/react-nanodegree--nd019)
+[**React Nanodegree 2019**](https://www.udacity.com/course/react-nanodegree--nd019)
 
 
 # Tools and Skills
 
-* Python and R programming for machine learning and data analysis 
+* Python, Javascript, R, PHP, SQL
 
-* Javascript
+* React/Redux/React Native
 
-* React and Redux
-
-* SQL
-
-* Probability & Statistics, Hypothesis Testing
+* Probability & Statistics, Hypothesis Testing, Experiment Design
 
 # Links
 
