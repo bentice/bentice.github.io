@@ -32,8 +32,20 @@ Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest
 
 # Experience
 
+### [StackAdapt](https://www.stackadapt.com/)
+**Data Analyst, Programmatic Partnerships & BI, 09/2019-Present**
+
+StackAdapt is the #1 programmatic native demand side advertising platform.
+
+* Developing Automated Dashboards that deliver Business Insights in realtime
+
+* Structuring and Analyzing real time bidding data in order to effectively optimize our supply path
+
+* Work to develop new products with Data and Inventory Partners
+
+
 ### [Acuity Ads](https://www.acuityads.com/)
-**Campaign Manager Analytics, 09/2018-Present**
+**Campaign Manager Analytics, 09/2018-09/2019**
 
 Acuity Ads is a Demand Side Digital Advertising Platform 
 
@@ -98,11 +110,15 @@ Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statisti
 
 # Tools and Skills
 
-* Python, Javascript, R, PHP, SQL
+* Python, Javascript, R, SQL, PHP
 
-* React/Redux/React Native
+* React, Redux, React Native
+
+* Experience using Amazon Web Services (Redshift, Elasticsearch, AWS Lambda, s3)
 
 * Probability & Statistics, Hypothesis Testing, Experiment Design
+
+* Computational Statistics, Data Analysis, and Machine Leaning
 
 # Links
 
