@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<!-- 
 # Projects
 
 ## [CodeSandbox](https://codesandbox.io/u/bentice)
@@ -27,7 +27,7 @@ Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes 
 
 ## [Visualizing the 2018 Ontario Election](Elections_Article.md)
 
-Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018).
+Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018). -->
 
 
 # Experience
