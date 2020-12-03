@@ -33,15 +33,17 @@ Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest
 # Experience
 
 ### [StackAdapt](https://www.stackadapt.com/)
-**Data Analyst, Programmatic Partnerships & BI, 09/2019-Present**
+**Analyst, Partnerships & Business Solutions, 09/2019-Present**
 
 StackAdapt is the #1 programmatic native demand side advertising platform.
 
-* Developing Automated Dashboards that deliver Business Insights in realtime
+* Created data pipelines in Python/Javascript working with various AWS storage services (ElasticSearch, Redshift, S3, SQL, etc.)
 
-* Structuring and Analyzing real time bidding data in order to effectively optimize our supply path
+* Worked with Product and Engineering to create a search and content recommendation engine to filter through over 20k documents
 
-* Work to develop new products with Data and Inventory Partners
+* Developed Python libraries that automated the collection and structuring of data; making analysis quick and easy
+
+* Lead on Supply Path Optimization improving performance on KPI's and reducing costs
 
 
 ### [Acuity Ads](https://www.acuityads.com/)
