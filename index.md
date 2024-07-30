@@ -53,7 +53,7 @@ Voice automation for retail eCommerce, and transportation brands.
 
 ### [Paddle HR (Acquired by LinkedIn)](https://www.linkedin.com/company/paddle-inc./)
 
-**Software Engineer 02/2021-04/2022**
+**Software Engineer 04/2021-04/2022**
 
 AI-powered internal mobility & career growth.
 
@@ -141,4 +141,4 @@ Containerization, IAM
 
 # Links
 
-[Linkedin](https://www.linkedin.com/in/ben-tice/)	[AngelList](https://angel.co/ben-tice)	[Github](https://github.com/bentice)	[Kaggle](https://www.kaggle.com/bentice)
+[Linkedin](https://www.linkedin.com/in/ben-tice/) [Github](https://github.com/bentice)
