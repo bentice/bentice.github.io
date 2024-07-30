@@ -1,49 +1,87 @@
 ---
 layout: default
 ---
-<!-- 
-# Projects
-
-## [CodeSandbox](https://codesandbox.io/u/bentice)
-
-A few projects I've been working on using React.
-
-* [Lord of the Rings Twitter](https://67gry.codesandbox.io/) a Lord of the Rings themed twitter app using Redux for state management.
-
-* [Shelves](https://3soz4.codesandbox.io/) an app that displays books in different shelves and also searches for new books to add using the [Udacity Books Lender API](https://reactnd-books-api.udacity.com/)
-
-* [Star Wars Would You Rather](https://8jq54.csb.app/#/) a Star Wars Would You Rather Game using React, Redux, and Ant Design
-
-* [Mobile-Flashcards](https://github.com/bentice/mobile-flashcards) a mobile app for making flashcards and quizing yourself made with react native.
-
-
-## [Location, Location, Location...](http://rpubs.com/ben_tice/restzipcodes)
-
-Mapping US restaurants and finding the most competitive ZIP codes for restaurants across the major metropolitan areas.
-
-## [Enron Corpus: Network and Linguistic Analysis](Enron_Article.md)
-
-Network Analysis and Linguistic Analysis of Enron Email Corpus for the purposes of replicating James Pennebaker's findings in ["Pronoun Use Reflects Standings in Social Hierarchies"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.904.6689&rep=rep1&type=pdf). In a series of studies Pennebaker found that lower status individuals used more first-person singular pronouns (I) compared with higher status individuals. In addition, he found that lower status individuals used first-person plural (we) more relative to lower status individuals. This was tested using various [centrality](https://en.wikipedia.org/wiki/Centrality) algorithms (degree, closeness, & betweenness) common in [Network Theory](https://en.wikipedia.org/wiki/Network_theory)  as a indicators of importance and status in a social network. This replication provided evidence both contrary and aligned with Pennebaker's findings. However, questions still remain as to how predictive centrality measures inferred from email communications are of social status within an hierarchy.
-
-## [Visualizing the 2018 Ontario Election](Elections_Article.md)
-
-Interactive choropleth maps made with [Bokeh](https://bokeh.pydata.org/en/latest/) for Visualizing the [Ontario General Election, 2018](https://en.wikipedia.org/wiki/Ontario_general_election,_2018). -->
-
 
 # Experience
 
+
+### [ImmiGreat](https://www.immigreat.io/)
+
+**Founder + Software Engineer 01/2024-Present**
+
+ImmiGreat makes navigating Canadian Immigration easier for newcomers.
+
+* Created immigration points calculators for Federal and provincial immigration ranking systems, helping users assess their eligibility.
+
+* Collaborated with consultants and law firms to embed calculators on their websites, enhancing client acquisition through user-friendly tools.
+
+* Pivoted to developing a mobile app using React Native/Expo and Firebase, achieving over 2,000 installs and aiming to be the "Borrowell of Canadian immigration".
+
+* Developed a Physical Presence Calculator to help users track their residency days in Canada for citizenship applications.
+
+* Designed visualizations and tools to simplify interactions with government information, making it more accessible for users.
+
+* Explored partnerships with banks and telecom companies to advertise and offer deals to newcomers to Canada.
+
+* Established partnerships with large immigration blogs to create mutually beneficial collaborations.
+
+
+### [Flip (formerly Redroute)](https://flipcx.com/)
+
+**Software Engineer 04/2022-01/2024**
+
+Voice automation for retail eCommerce, and transportation brands.
+
+* Increased automation on the Taxi Voice product API from 60% to 70%.
+
+* Developed and enhanced integrations with 10+ taxi dispatch systems, including leading our largest clients in Australia, USA, and UK.
+
+* Implemented caching mechanisms to reduce Google Location API costs.
+
+* Revamped the customer portal using React/Next.js, replacing the old vanilla JavaScript framework.
+
+* Managed EC2 servers and deployed multiple microservices, ensuring high availability and scalability.
+
+* Utilized Terraform for infrastructure as code, streamlining the management of resources.
+
+* Learned and contributed to a proprietary coding language, developing new features and conventions.
+
+* Improved logging with Datadog, enhancing debugging efficiency and reducing costs.
+
+* Utilized Microsoft Text-to-Speech and Google Speech-to-Text to enhance voice automation capabilities.
+
+
+### [Paddle HR (Acquired by LinkedIn)](https://www.linkedin.com/company/paddle-inc./)
+
+**Software Engineer 02/2021-04/2022**
+
+AI-powered internal mobility & career growth.
+
+* Worked on PaddleHR portal using React/Django/Postgres/GraphQL/Neo4j
+
+* Developed engaging data visualizations using D3.js and ApexCharts
+
+* Came up with new products and features to increase management engagement with the platform
+
+* Helped increase skill parsing from resumes
+
+* Integrated Platform with Sendgrid, Slack, Microsoft Teams using [Paragon](https://www.useparagon.com/)
+
 ### [StackAdapt](https://www.stackadapt.com/)
-**Analyst, Partnerships & Business Solutions, 09/2019-Present**
+**Data Engineer/Analyst 09/2019-01/2021**
 
 StackAdapt is the #1 programmatic native demand side advertising platform.
 
-* Created data pipelines in Python/Javascript working with various AWS storage services (ElasticSearch, Redshift, S3, SQL, etc.)
+* Managed data pipelines in Python/JavaScript working with various AWS
+services (Elasticsearch, Redshift, S3, etc.)
 
-* Worked with Product and Engineering to create a search and content recommendation engine to filter through over 20k documents
+* Create a search and content
+recommendation engine to filter through over 20k documents
 
-* Developed Python libraries that automated the collection and structuring of data; making analysis quick and easy
+* Designed a python API that automated the collection and structuring of
+sellers.json, ads.txt, and bid level data
 
-* Lead on Supply Path Optimization improving performance on KPI's and reducing costs
+* AB tested partner supply paths using a number of different profit and quality metics
 
 
 ### [Acuity Ads](https://www.acuityads.com/)
@@ -67,60 +105,39 @@ Acuity Ads is a Demand Side Digital Advertising Platform
 
 The CDL is a seed-stage startup accelerator program for science/technology ventures.
 
-* Created a statistical model to predict seed-stage valuations based on characteristics of the venture.
+* Managed the Lab's data and dashboards tracking 150 companies
 
-* Built Dashboards so that CDL team members could check key metrics.
+* Worked on valuation methodology for CDL startups
 
-* Managed a monthly newsletter for the CDL network (graduate ventures, angel investors, Venture Capital).
-
-* Updated social media accounts with news about CDL ventures.
-
-### Statistics Canada
-**Enumerator, 05/2016-08/2016**
-
-* Secured 2016 census information from non-respondents. 
-
-* Tracked progress and actionable information for supervisors and fellow enumerators. 
-
-* Consistently achieved weekly targets for censuses collected. 
-
-
-### University of Toronto Plaks Lab
-**Research Assistant, 09/2015-12/2015**
-
-* Selected from PSY426 Social Psychology of Motivational Theory class to assist in research.
-
-* Research that studied the link between moral decision making and emotional response. 
-
-* Participants were asked to make moral decisions and their facial expressions were coded by micro-expression reading software.
-
-* Aggregated relevant research to be cited in the final article.
-
-* Cleaned and prepped the data to be suitable for an academic presentation.
+* Circulated a monthly newsletter amongst fellows, alumni companies, and
+investors.
 
 # Education
 
 ## University of Toronto, St. George
 **Class of 2017**
-**Honours Bachelor of Science, Double Major Statistics and Psychology**
+**Bachelor's of Science Degree, Statistics**
 
-Relevant Courses: Machine Learning and Data Mining, Data Analysis I/II, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
+Relevant Courses: Machine Learning and Data Mining, Statistical Programming, Statistical Computation, Linear Algebra, Calculus, Sampling Methods, Experiment Design.
 
 ## Udacity
 [**React Nanodegree 2019**](https://www.udacity.com/course/react-nanodegree--nd019)
 
+[**Full Stack Nanodegree 2021**](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044)
+
 
 # Tools and Skills
 
-* Python, Javascript, R, SQL, PHP
+* Python, Typescript/JavaScript, React/Redux, React Native, Git
 
-* React, Redux, React Native
+* AWS, GCP, Firebase, S3, Redshift, EC2, ElasticSearch, MongoDB
 
-* Experience using Amazon Web Services (Redshift, Elasticsearch, AWS Lambda, s3)
+* REST API's, ETL Pipelines, Data Modelling, Server Deployment,
+Containerization, IAM
 
-* Probability & Statistics, Hypothesis Testing, Experiment Design
+* Computational Statistics, Data Visualization, and Machine Leaning
 
-* Computational Statistics, Data Analysis, and Machine Leaning
+* 
 
 # Links
 
