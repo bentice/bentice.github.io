@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+# Ben Tice
+
+**Software Engineer**
+
+- **Location**: Toronto, Canada  
+- **Email**: [ben@immigreat.io](mailto:your.email@example.com)  
+- **Website**: [https://www.immigreat.io](https://www.immigreat.io)
 
 # Experience
 
