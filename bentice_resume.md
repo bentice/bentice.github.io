@@ -86,6 +86,9 @@ The CDL is a seed-stage startup accelerator program for science/technology ventu
 * Developed valuation methodologies for Creative Destruction Lab startups.
 * Circulated a monthly newsletter among fellows, alumni companies, and investors.
 
+
+
+
 # Education
 
 ## University of Toronto, St. George
