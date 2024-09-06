@@ -56,7 +56,7 @@ Voice automation solutions for retail eCommerce and transportation brands.
 - Utilized Microsoft, Google, OpenAI Cloud AI products
 
 ### [Paddle HR (Acquired by LinkedIn)](https://www.linkedin.com/company/paddle-inc./)
-**Software Engineer** | *04/2021 - 04/2022*
+**Software Engineer** | *02/2021 - 04/2022*
 
 AI-powered internal mobility & career growth platform.
 
