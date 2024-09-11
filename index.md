@@ -6,8 +6,6 @@ layout: default
 
 📍 Toronto, Canada | 📧 [ben@immigreat.io](mailto:ben@immigreat.io)
 
----
-
 ## Skills
 
 - Python, TypeScript, JavaScript, React/Redux, React Native
